@@ -1,0 +1,314 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisclaro: #DFE9F3;
+    /*--fuente-principal: 3.8rem*/
+
+}
+
+@font-face {
+    font-family: 'Sansation_regular';
+    src: url(../Fuentes/Sansation_Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sansation_bold';
+    src: url(../Fuentes/Sansation_Bold.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Tipografia*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: inherit; /* Permite que el tamaño de fuente se herede */
+    scroll-snap-type: y mandatory; /* Permite que el scroll se detenga en los elementos con scroll-snap-align */
+}
+*,*:before,*:after {
+    box-sizing: inherit; /* Permite que el tamaño de fuente se herede */
+    /*Hack para box model*/
+}
+
+/*Scroll snap*/
+.servicios .navegacion-principal .formulario{
+    scroll-snap-align: center; /*Permite que el scroll se detenga en los elementos con scroll-snap-align*/
+    scroll-snap-stop: always; /*Permite que el scroll se detenga en los elementos con scroll-snap-align*/
+}
+
+body {
+    font-size: 16px; /* Usar rem para cuando usas pantallas de smarttv / 1rm = 10 px*/
+    font-family: 'Sansation_regular', sans-serif; 
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+    /*El background image tiene linear gradient para que se defina un degradado dependiendo el gusto, primero es orientacion o direccion, color con intensidad en porcentaje y repetir*/
+}
+/* Estas dos lineas de codigo sirven para hacer que nuestras paginas se adapten mejor a cualquier navegador */
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Titulos*/
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto
+    /*top , derecha , abajo , izquierda */
+    /*si son dos valores se pueden poner 0 auto*/
+}
+
+/*Navegacion principal*/
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    /*Fletbox se utiliza en el elemento padre*/
+    display: flex;
+    flex-direction: column; /*Flexdirection permite columnas o filas*/
+    /*Flexdirection permite columnas o filas*/
+    align-items: center; /*Alinear horizontalmente*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        /*Flexdirection permite columnas o filas*/
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    /*padding engorda hacia arriba o dentro del contenedor*/
+   color: var(--blanco);
+   text-decoration: none;
+   font-size: 2rem;
+   font-weight: bold;
+   padding: 1rem; /*Se aplica de la orilla hacia dentro*/
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+
+/*Imagen portada*/
+.hero{
+    background-image: url(../Imagenes/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative; /*El padre siempre tiene que tener posicion relative para que el hijo se posicione en absoluto*/
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /*Color de fondo con transparencia*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2{
+    color: var(--blanco);
+}
+
+.ubicacion p{
+    font-size: 1.5;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.ubicacion svg{
+    color: var(--primario);
+}
+
+/*Boton contactar*/
+
+.boton{
+    background-color: var(--secundario); /*Color del boton*/
+    text-decoration: none; /*Quita el subrayado del boton*/
+    color: var(--blanco); /*Color de la letra
+    padding: 1rem 3rem; /*Padding es el espacio dentro del boton*/
+    margin-top: 1rem;   /*Margen superior*/
+    font-size: 2rem; /*Tamaño de la letra*/
+    text-transform: uppercase; /*Pone las letras en mayusculas*/
+    font-weight: bold; /*Engorda la letra*/
+    border-radius: 0.5rem; /*Borde redondeado*/
+    text-align: center; /*Centrar el texto*/
+    width: 90%; /*Ancho del boton*/
+    padding: 1rem 1.5rem; /*Padding es el espacio dentro del boton*/
+    border: none; /*Quita el borde del boton*/
+}
+
+.boton:hover{
+    background-color: var(--primario); /*Color del boton al pasar el mouse*/
+    color: var(--oscuro); /*Color de la letra al pasar el mouse*/
+    cursor: pointer; /*Cursor de mano al pasar el mouse*/
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+/*Servicios*/
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem; /*Espacio entre los elementos*/
+    }
+}
+
+.servicio{
+    display: flex; /*Flexbox para centrar el icono*/
+    flex-direction: column; /*Flexdirection permite columnas o filas*/
+    align-items: center; /*Alinear horizontalmente*/
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2; /*Espacio entre lineas*/
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%; /*Borde redondeado*/
+
+    display: flex; /*Flexbox para centrar el icono*/
+    justify-content: space-evenly; /*Centrar horizontalmente*/
+    align-items: center; /*Centrar verticalmente*/
+}
+
+/*CONTACTO*/
+.formulario{
+    background-color: var(--gris);
+    width: min( 60rem, 100% ); /*Min utiliza el valor mas pequeño de la pantalla para que se adapte a la pantalla*/
+    margin: 0 auto; /*Centrar el formulario*/ /*Utilizarlo cuando sea un formulario y cuando el padre no sea display flex*/
+    padding: 2rem;
+    border-radius: 1rem; /*Borde redondeado*/
+
+}
+
+.formulario fieldset{
+    border: none; /*Quita el borde del fieldset*/
+}
+
+.formulario legend{
+    text-align: center; /*Centrar el texto*/
+    font-size: 1.8rem; /*Tamaño de la letra*/
+    text-transform: uppercase; /*Pone las letras en mayusculas*/
+    font-weight: bold; /*Engorda la letra*/
+    margin-bottom: 2rem; /*Margen inferior*/
+    color: var(--primario);
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+   display: grid; /*Grid es una estructura de diseño en la que los elementos se distribuyen en filas y columnas*/
+   grid-template-columns: 1fr 1fr; /*Auto fit permite que se adapte al ancho de la pantalla*/
+   grid-template-rows: auto auto 20rem; /*Auto fit permite que se adapte al ancho de la pantalla*/
+   column-gap: 1rem; /*Espacio entre los elementos*/
+
+   .campo:nth-child(3),
+   .campo:nth-child(4){
+    grid-column: 1 / 3;
+   }
+}
+
+    
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold; /*Engorda la letra*/
+    margin-bottom: .5rem; /*Margen inferior*/
+    display: block; /*Hace que el label ocupe todo el ancho*/
+}
+
+.input-text{
+    width: 95%; /*Ancho del input*/
+    border: none; /*Quita el borde del input*/
+    padding: 1.5rem 1rem; /*Padding es el espacio dentro del input*/
+    border-radius: .5rem; /*Borde redondeado*/
+
+}
+
+.enviar .boton{
+    width: 94%; /*Ancho del boton*/;
+}
+
+.campo textarea{
+    height: 15rem; /*Altura del textarea*/
+
+}
+
+/*FOOTER*/
+.footer{
+    text-align: center; /*Centrar el texto*/
+}
+
+/*Forma de darle estilo a los input*/
+/*.campo input[type="text"],
+.campo input[type="tel"]{
+    background-color: rebeccapurple;
+}*/
+
+/*.servicios{
+    display: grid; /*Grid es una estructura de diseño en la que los elementos se distribuyen en filas y columnas*/
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*Auto fit permite que se adapte al ancho de la pantalla
+    /*Template columns es para hacer columnas
+
+    grid-template-columns: repeat(3, 1fr); Template columns es para hacer columnas
+    grid-template-rows: 200px 200px; Template rows es para hacer filas
+
+
+    gap: 2rem; /*Espacio entre los elementos
+}*/

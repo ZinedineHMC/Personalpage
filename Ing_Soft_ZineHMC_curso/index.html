@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="--Es">  <!--Es para definir el lenguaje en este caso inglés-->
+<head> <!--Es la información que le dará al navegador-->
+    <meta charset="UTF-8"> <!--Aplica un encoding para aplicar acentos, eñes y demas cosas propias del idioma o región -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Le da infomracioin al servidor http -->
+    <title>Pagina perrona</title> <!--Sirve para que el usuario descubra nuestra pagina en un navegador-->
+    <link rel="preload" href="css/normalize.css" as="style"> <!--Sirve para que el navegador interprete de la misma manera los estilos de la pagina-->
+    <link rel="stylesheet" href="css/normalize.css"> <!--Sirve para que el navegador interprete de la misma manera los estilos de la pagina-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link href="css/estilos.css" rel = "stylesheet" >
+
+</head>
+<body> <!--LOS USUARIOS VERAN LA INFORMACIÓN DEL BODY-->
+
+    <header> <!--<header>: Representa el contenido introductorio, generalmente un grupo de ayudas de navegación o introducción.-->
+
+        <h1 class="titulo">
+            Zinedine Hiram Miranda Campos <span>Ing. de software</span>
+        </h1> <!--H1 hasta el H6 sirven para defirnir la jerarquia o importancia de lo que escribimos-->
+
+        <div class="nav-bg">
+            <nav class="navegacion-principal contenedor"> <!--Como hacer un enlace-->
+                <a href="#">Inicio</a>
+                <a href="#">Sobre mi</a>
+                <a href="#">Clientes</a>
+                <a href="#">Contacto</a>    
+            </nav>
+        </div>
+    </header> <!--<header>: Representa el contenido introductorio, generalmente un grupo de ayudas de navegación o introducción.-->
+
+         
+    <section class="hero"> <!--<section>: Representa una sección independiente que no tiene un elemento semántico más específico para representarla.-->
+     <div class="contenido-hero">
+        <h2> Diseñador y Desarrollador web</h2>
+
+
+        <div class="ubicacion">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            <p> Manzanillo, Colima</p>    
+        </div>
+        
+        <a class="boton" href="#">Contactar</a> <!--Sirve para hacer un enlace-->
+
+     </div>   
+    
+
+        
+    </section>   
+
+<main class="contenedor sombra"> <!--<main>: Representa el contenido dominante del <body> de un documento.-->
+
+    <h2 class="titulo">Mis servicios</h2>
+
+    <div class="servicios"> <!--Sirve para agrupar elementos con fines de estilo o porque comparten valores de atributos, como class.-->
+        
+        <section class="servicio">
+            <h3>Diseño Web</h3>
+
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.25"> <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path> <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path> <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path> <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path> </svg> 
+                </div>
+                
+                <p>Ut velit odio, molestie vel tellus quis, placerat pharetra augue. Suspendisse elementum nec magna a mollis. Proin aliquet aliquam ex quis pellentesque..</p>
+        </section>
+
+        <section class="servicio">
+            <h3>Aplicaciones web</h3>
+
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M4 10l0 6"></path> <path d="M20 10l0 6"></path> <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0"></path> <path d="M8 3l1 2"></path> <path d="M16 3l-1 2"></path> <path d="M9 18l0 3"></path> <path d="M15 18l0 3"></path> </svg> 
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z"></path> <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2"></path> </svg> 
+                </div>        
+
+                <p>Ut velit odio, molestie vel tellus quis, placerat pharetra augue. Suspendisse elementum nec magna a mollis. Proin aliquet aliquam ex quis pellentesque..</p>
+        </section> 
+        
+        <section class="servicio">
+            <h3>E-comerce</h3>
+
+                <div class="iconos">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path> <path d="M3 10l18 0"></path> <path d="M7 15l.01 0"></path> <path d="M11 15l2 0"></path> </svg>
+                </div>    
+
+                <p>Ut velit odio, molestie vel tellus quis, placerat pharetra augue. Suspendisse elementum nec magna a mollis. Proin aliquet aliquam ex quis pellentesque..</p>
+
+                
+        
+
+        </section>
+    </div>   <!--Cierre de servicios-->
+    
+     
+    <section class="contacto"> <!--Sirve para agrupar elementos con fines de estilo o porque comparten valores de atributos, como class.-->
+    <h3>Contacto</h3>
+        <form class="formulario"> <!--Para agregar el formulario-->
+            <fieldset> <!--Primera parte del formulario-->
+                <legend>Contactanos llenando los campos</legend> <!--Sirve para ponerle indicaciones al formulario-->
+                
+                <div class="contenedor-campos"> <!--Div que agrupa los campos del formulario-->
+                    
+                    <div class="campo">
+                    <label>Nombre</label> <!--Aqui le pones nombre a la parte donde ingresar la informacion, el campo pues-->
+                    <input class="input-text" type ="text" placeholder="Nombre">
+                    </div>
+
+                    <div class="campo">
+                    <label>Teléfono</label>
+                    <input class="input-text" type="tel" placeholder="Tu teléfono">
+                    </div>
+
+                    <div class="campo">
+                    <label>Correo</label>
+                    <input class="input-text" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="campo">
+                    <label>Mensaje</label>
+                    <textarea class="input-text"></textarea>
+                    </div>
+                </div> <!--Cierre del div que agrupa los campos del formulario-->
+
+                    <div class="enviar">
+                    <input class="boton" type="submit" value="Enviar">
+                    </div>
+                
+
+            </fieldset>
+        </form> <!--Cierre del formulario-->
+    </section>    
+
+</main>
+
+    <footer class="footer"> <!--<footer>: Representa el pie de página para el contenido de sección o raíz de la sección más cercana.-->
+        <section>
+
+
+        </section>
+    <p>Todos los derechos reservados. Zinedine Hiram Miranda Campos.</p>
+    </footer> <!--<footer>: Representa el pie de página para el contenido de sección o raíz de la sección más cercana.-->
+
+<!--Diccionario:
+<header>: Representa el contenido introductorio, generalmente un grupo de ayudas de navegación o introducción.
+
+<footer>: Representa el pie de página para el contenido de sección o raíz de la sección más cercana.
+
+<nav>: Representa una sección de la página que enlaza con otras páginas o partes dentro de la página; una sección con enlaces de navegación.
+
+<main>: Representa el contenido dominante del <body> de un documento.
+
+<section>: Representa una sección independiente que no tiene un elemento semántico más específico para representarla.
+
+<article>: Representa una composición autocontenida en un documento, página, aplicación o sitio, que está destinada a ser independiente y reutilizable.
+
+<aside>: Representa una porción de un documento cuyo contenido está solo indirectamente relacionado con el contenido principal del documento.
+
+<div>: Representa un contenedor genérico para contenido de flujo, que no representa inherentemente nada. Se puede usar para agrupar elementos con fines de estilo o porque comparten valores de atributos, como class.-->
+
+</body>
+</html>
+    
